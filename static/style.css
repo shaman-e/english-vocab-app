@@ -1,0 +1,40 @@
+/* スマホでも読みやすい基本設定 */
+body {
+    font-size: 18px;
+    padding: 10px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* ボタンをスマホ向けに大きく */
+button {
+    font-size: 20px;
+    padding: 12px 20px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* 入力欄をスマホ向けに */
+input[type="text"] {
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+/* 問題ごとの余白 */
+.quiz-item {
+    margin-bottom: 20px;
+}
+
+/* 結果画面の見やすさ向上 */
+.result-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
