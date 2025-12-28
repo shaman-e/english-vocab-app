@@ -1,25 +1,15 @@
 from flask import Flask, render_template, request
+import os
 import json
 import random
 
 app = Flask(__name__)
 
-# 仮の単語データ（後で高校入試レベルに差し替える）
-# words = [
-#     {"english": "apple", "japanese": "りんご"},
-#     {"english": "study", "japanese": "勉強する"},
-#     {"english": "run", "japanese": "走る"},
-#     {"english": "book", "japanese": "本"},
-#     {"english": "water", "japanese": "水"},
-#     {"english": "music", "japanese": "音楽"},
-#     {"english": "friend", "japanese": "友達"},
-#     {"english": "school", "japanese": "学校"},
-#     {"english": "happy", "japanese": "幸せな"},
-#     {"english": "fast", "japanese": "速い"}
-# ]
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+WORDS_PATH = os.path.join(BASE_DIR, "words.json")
 
 # JSONファイルから単語データを読み込む
-with open("words.json", "r", encoding="utf-8") as f:
+with open(WORDS_PATH, "r", encoding="utf-8") as f:
     words = json.load(f)
 
 @app.route("/")
